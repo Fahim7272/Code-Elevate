@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/name"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="55dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Welcome"
         android:textColor="@color/black"
@@ -58,7 +58,7 @@
         android:layout_below="@+id/welcome"
         android:layout_centerInParent="true"
         android:fontFamily="@font/poppins"
-        android:text="Welcome to Code Elevate: Your coding companion! Learn, practice, and elevate your coding skills with interactive lessons and challenges. Let's code together!"
+        android:text="Welcome to Code Elevate. Your coding companion! Learn, practice, and elevate your coding skills with interactive lessons and challenges. Let's code together!"
         android:textAlignment="center"
         android:textColor="@color/black" />
 
