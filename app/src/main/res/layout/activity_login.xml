@@ -50,9 +50,8 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/text_edit"
-        android:textSize="15sp"
         android:hint="  Username or Email"
-        />
+        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/pass"
@@ -128,8 +127,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="#00FFFFFF"
+        android:fontFamily="@font/poppins_bold"
         android:text="SignUp"
-        android:textColor="@color/white"
+        android:textColor="#e45a04"
         android:textSize="12sp" />
 
 </RelativeLayout>
