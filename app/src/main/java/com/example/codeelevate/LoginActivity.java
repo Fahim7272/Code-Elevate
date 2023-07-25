@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button b1;
+    Button b1, b2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,17 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"SignUp",
                         Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        b2=(Button)findViewById(R.id.loginn);
+        b2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent intent = new Intent(LoginActivity.this, LanguageSelection.class);
                 startActivity(intent);
             }
         });
