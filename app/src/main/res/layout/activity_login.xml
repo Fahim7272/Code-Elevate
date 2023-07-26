@@ -62,8 +62,8 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="35dp"
         android:background="@drawable/text_edit"
-        android:textSize="15sp"
-        android:hint="  Password" />
+        android:hint="  Password"
+        android:textSize="15sp" />
 
     <CheckBox
         android:id="@+id/chk"

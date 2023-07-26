@@ -29,6 +29,40 @@
         android:textColor="@color/white"
         android:textSize="10sp" />
 
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/profile_icon" />
+
+    <Button
+        android:id="@+id/profile_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/profile_icon"
+        android:background="#00FFFFFF"/>
+
+    <TextView
+        android:id="@+id/janina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:layout_below="@+id/profile"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:text="Profile"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
 
     <TextView
         android:id="@+id/select_language"
