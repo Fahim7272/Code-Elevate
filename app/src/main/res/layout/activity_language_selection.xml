@@ -45,7 +45,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/c_plus_plus"
+        android:id="@+id/cpp"
         android:layout_width="230dp"
         android:layout_height="100dp"
         android:layout_below="@+id/select_language"
@@ -63,7 +63,7 @@
         android:id="@+id/java"
         android:layout_width="230dp"
         android:layout_height="100dp"
-        android:layout_below="@+id/c_plus_plus"
+        android:layout_below="@+id/cpp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:background="@drawable/circle"

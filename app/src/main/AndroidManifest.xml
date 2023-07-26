@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeElevate">
         <activity
+            android:name=".Java"
+            android:exported="false" />
+        <activity
+            android:name=".C_Plus_Plus"
+            android:exported="false" />
+        <activity
             android:name=".LanguageSelection"
             android:exported="false" />
         <activity
