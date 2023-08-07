@@ -4,36 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:id="@+id/java_drawer_layout"
-    tools:openDrawer="start"
-    tools:context=".Java">
+    android:id="@+id/drawer_layout"
+    tools:context=".Java"
+    android:background="#130139">
 
 
     <RelativeLayout
-        android:id="@+id/java_body_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#130139">
 
-        <include
-            android:id="@+id/java_toolbar"
-            layout="@layout/my_toolbar"
-            />
+        <include layout="@layout/my_toolbar"/>
+        <TextView
+            android:id="@+id/select_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Lesson appears soon"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
     </RelativeLayout>
 
 
 
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/java_navdrawer"
-        android:layout_marginTop="50dp"
-        app:headerLayout="@layout/nav_header"
-        app:menu="@menu/nav_menu"
-        android:layout_gravity="start"
-        android:layout_width="match_parent"
+        android:id="@+id/nav_View"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_layout"
+        app:menu="@menu/nav_menu" />
 
-        />
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
