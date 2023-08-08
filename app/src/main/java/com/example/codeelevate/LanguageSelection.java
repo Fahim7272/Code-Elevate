@@ -1,18 +1,33 @@
 package com.example.codeelevate;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
 
 public class LanguageSelection extends AppCompatActivity {
 
     AppCompatButton b1, b2;
     Button b3;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    ActionBarDrawerToggle toggle;
+
+    ImageView imageMenu;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,13 +52,56 @@ public class LanguageSelection extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // Navagation Drawar------------------------------
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_View);
+        imageMenu = findViewById(R.id.imageMenu);
 
-        b3=(Button) findViewById(R.id.profile_btn);
-        b3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(LanguageSelection.this, AccountInfo.class);
-                startActivity(intent);
+        toggle = new ActionBarDrawerToggle(LanguageSelection.this, drawerLayout, R.string.open, R.string.close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+                    case R.id.nav_home:
+                        drawerLayout.closeDrawers();
+                        break;
+
+                    case R.id.nav_account:
+                        Toast.makeText(LanguageSelection.this, "Facebook", Toast.LENGTH_SHORT).show();
+                        drawerLayout.closeDrawers();
+                        break;
+
+                    case R.id.nav_leaderBoard:
+                        Intent intent3 = new Intent(LanguageSelection.this,LeaderBoard.class);
+                        startActivity(intent3);
+                        drawerLayout.closeDrawers();
+                        break;
+
+                    case R.id.nav_signout:
+                        Intent intent4 = new Intent(LanguageSelection.this,LoginActivity.class);
+                        startActivity(intent4);
+                        drawerLayout.closeDrawers();
+                        break;
+
+                }
+                return false;
             }
         });
+
+        imageMenu = findViewById(R.id.imageMenu);
+
+        imageMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Code Here
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+
     }
 }

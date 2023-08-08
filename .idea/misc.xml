@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Code-Elevate/app/src/main/res/drawable-v24/ic_baseline_menu_24.xml" value="0.19282051282051282" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/activity_cplus_plus.xml" value="0.1" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/activity_java.xml" value="0.1" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/activity_language_selection.xml" value="0.1" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/drawer_layout.xml" value="0.1" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/my_toolbar.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable/btn_orange.xml" value="0.2703125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable/circle.xml" value="0.2703125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1921875" />
