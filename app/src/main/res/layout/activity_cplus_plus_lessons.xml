@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".C_Plus_Plus_Lessons"
+    android:orientation="vertical"
+    android:background="#130139">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="LESSON : "
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:fontFamily="@font/goldman"
+        android:textSize="30sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lesson_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:text="Lesson"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/quiz_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:text="Quiz"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/problems_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:text="Problems"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/ob2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/para"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            />
+
+    </ScrollView>
+
+</LinearLayout>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeElevate">
         <activity
+            android:name=".C_Plus_Plus_Lessons"
+            android:exported="false" />
+        <activity
             android:name=".AccountInfo"
             android:exported="false" />
         <activity

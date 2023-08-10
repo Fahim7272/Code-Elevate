@@ -8,29 +8,102 @@
     tools:context=".C_Plus_Plus">
 
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#130139">
+        android:background="#130139"
+        android:orientation="vertical">
 
         <include layout="@layout/my_toolbar"/>
 
-        <TextView
-            android:id="@+id/select_language"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="150dp"
-            android:layout_marginRight="10dp"
-            android:fontFamily="@font/poppins_bold"
-            android:text="Lesson appears soon"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="30sp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/c_lesson1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/light_color_btn"
+            android:text="LESSON 1 : GET STARTED" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/c_lesson2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/light_color_btn"
+            android:text="LESSON 2 : Syntex" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/c_lesson3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/light_color_btn"
+            android:text="LESSON 3 : Data Type" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/c_lesson4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/light_color_btn"
+            android:text="LESSON 4 : CONDITION" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/c_lesson5"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/light_color_btn"
+            android:text="LESSON 5 : LOOP" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/c_lesson6"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/light_color_btn"
+            android:text="LESSON 6 : ARRAYS" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/c_lesson7"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/light_color_btn"
+            android:text="LESSON 7 : FUNCTION" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/c_lesson8"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/light_color_btn"
+            android:text="LESSON 8 : RECURSION" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/c_lesson9"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/light_color_btn"
+            android:text="LESSON 9 : POINTERS" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/c_lesson10"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/light_color_btn"
+            android:text="LESSON 10 : STRUCTURES" />
 
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
     <com.google.android.material.navigation.NavigationView

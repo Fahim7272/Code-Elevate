@@ -1,6 +1,5 @@
 package com.example.codeelevate;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -39,7 +38,10 @@ public class LanguageSelection extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(LanguageSelection.this, C_Plus_Plus.class);
+                intent.putExtra("L_name", "cpp");
                 startActivity(intent);
+
+
             }
         });
 
@@ -49,6 +51,7 @@ public class LanguageSelection extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(LanguageSelection.this, Java.class);
+                intent.putExtra("L_name", "java");
                 startActivity(intent);
             }
         });
@@ -63,7 +66,7 @@ public class LanguageSelection extends AppCompatActivity {
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            public boolean onNavigationItemSelected( MenuItem item) {
 
                 switch (item.getItemId()) {
                     case R.id.nav_home:

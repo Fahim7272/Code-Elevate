@@ -18,7 +18,6 @@
         android:textColor="@color/white"
         android:textSize="45sp" />
 
-
     <TextView
         android:id="@+id/wel"
         android:layout_width="wrap_content"
@@ -50,7 +49,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/text_edit"
-        android:hint="  Username or Email"
+        android:hint="  Username"
         android:textSize="15sp" />
 
     <EditText
@@ -113,7 +112,7 @@
         android:id="@+id/acc_nai"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/login_page_to_signup"
+        android:layout_above="@+id/login_page_login_btn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins"
@@ -121,7 +120,7 @@
         android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/login_page_to_signup"
+        android:id="@+id/login_page_login_btn"
         android:layout_width="85dp"
         android:layout_height="38dp"
         android:layout_alignParentBottom="true"

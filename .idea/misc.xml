@@ -3,15 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/Code-Elevate/app/src/main/res/drawable-v24/ic_baseline_menu_24.xml" value="0.19282051282051282" />
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/activity_cplus_plus.xml" value="0.1" />
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/activity_java.xml" value="0.1" />
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/activity_language_selection.xml" value="0.1" />
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/drawer_layout.xml" value="0.1" />
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/my_toolbar.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.26205128205128203" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable/btn_orange.xml" value="0.2703125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable/circle.xml" value="0.2703125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1921875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable/light_color_btn.xml" value="0.2109375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable/login_background.xml" value="0.2703125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable/login_backround_.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable/logo.xml" value="0.2703125" />
@@ -21,13 +17,15 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/font/.xml" value="0.284375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/activity_account_info.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/activity_cplus_plus.xml" value="0.2078804347826087" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/activity_cplus_plus_lessons.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/activity_java.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/activity_language_selection.xml" value="0.3762135922330097" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/activity_leader_board.xml" value="0.20833333333333334" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/activity_login.xml" value="0.23867753623188406" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/activity_signup.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/activity_splash.xml" value="0.2427536231884058" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/drawer_layout.xml" value="0.1983695652173913" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/my_toolbar.xml" value="0.2078804347826087" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/layout/nav_header.xml" value="0.2078804347826087" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/menu/nav_menu.xml" value="0.25416666666666665" />
