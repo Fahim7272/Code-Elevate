@@ -29,6 +29,9 @@ public class Java extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_java);
 
+
+
+
         lesson_1 = findViewById(R.id.lesson1);
         lesson_2 = findViewById(R.id.lesson2);
         lesson_3 = findViewById(R.id.lesson3);

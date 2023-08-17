@@ -61,6 +61,23 @@ public class C_Plus_Plus_Lessons extends AppCompatActivity {
             }
 
         });
+        quiz=(Button)findViewById(R.id.quiz_btn);
+
+        quiz.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                paragraph.setText(quiz_database);
+            }
+
+        });
+
+        problems=(Button)findViewById(R.id.problems_btn);
+
+        problems.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                paragraph.setText(problems_database);
+            }
+
+        });
 
 
 
