@@ -66,10 +66,10 @@ public class SignupActivity extends AppCompatActivity {
                     });
 
 
-                    databaseReference.child("java").child(usernameTxt).child("LessonNo").setValue(usernameTxt);
-                    databaseReference.child("java").child(usernameTxt).child("para").setValue(fullnameTxt);
-                    databaseReference.child("java").child(usernameTxt).child("quiz").setValue(emailTxt);
-                    databaseReference.child("java").child(usernameTxt).child("problems").setValue(passwordTxt);
+                    databaseReference.child("user").child(usernameTxt).child("username").setValue(usernameTxt);
+                    databaseReference.child("user").child(usernameTxt).child("fullname").setValue(fullnameTxt);
+                    databaseReference.child("user").child(usernameTxt).child("email").setValue(emailTxt);
+                    databaseReference.child("user").child(usernameTxt).child("password").setValue(passwordTxt);
 
                     Toast.makeText(getApplicationContext(),"Regiatration Successfull", Toast.LENGTH_SHORT).show();
                     Toast.makeText(getApplicationContext(),"Welcome"+usernameTxt+"!", Toast.LENGTH_SHORT).show();

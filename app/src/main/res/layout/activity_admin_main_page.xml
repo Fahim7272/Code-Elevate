@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin_Main_Page"
+    android:background="#130139">
+
+
+    <TextView
+        android:id="@+id/welcome_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="WELCOME ADMIN!"
+        android:textColor="@color/white"
+        android:textSize="42sp" />
+
+
+    <TextView
+        android:id="@+id/Selection_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome_admin"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:text="Enter Language"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+    <EditText
+        android:id="@+id/language"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/Selection_txt"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/text_edit"
+        android:hint="  Full Name"
+        android:textSize="13sp" />
+
+
+    <TextView
+        android:id="@+id/lesson_no_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/language"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Lesson No"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+    <EditText
+        android:id="@+id/lesson_no"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/lesson_no_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/text_edit"
+        android:hint="  Full Name"
+        android:textSize="13sp" />
+
+
+    <TextView
+        android:id="@+id/para_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lesson_no"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="The Lesson"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+    <EditText
+        android:id="@+id/insert_para"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/para_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/text_edit"
+        android:hint="  Full Name"
+        android:textSize="13sp" />
+
+
+    <TextView
+        android:id="@+id/problems_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/insert_quiz"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Enter Problems"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+    <EditText
+        android:id="@+id/insert_problems"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/problems_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/text_edit"
+        android:hint="  Full Name"
+        android:textSize="13sp" />
+
+
+    <TextView
+        android:id="@+id/enter_quiz_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/insert_para"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Enter Quiz"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+    <EditText
+        android:id="@+id/insert_quiz"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/enter_quiz_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/text_edit"
+        android:hint="  Full Name"
+        android:textSize="13sp" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/insert_lesson_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/insert_problems"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/btn_orange"
+        android:text="Insert Lesson" />
+
+
+
+</RelativeLayout>

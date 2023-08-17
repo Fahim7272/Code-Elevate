@@ -59,7 +59,7 @@ public class C_Plus_Plus extends AppCompatActivity {
 
                 Intent intent = new Intent(C_Plus_Plus.this, C_Plus_Plus_Lessons.class);
                 intent.putExtra("L_name", "cpp");
-                intent.putExtra("Lesson_name", "1");
+                intent.putExtra("Lesson_name", "2");
                 startActivity(intent);
             }
         });
@@ -70,7 +70,7 @@ public class C_Plus_Plus extends AppCompatActivity {
 
                 Intent intent = new Intent(C_Plus_Plus.this, C_Plus_Plus_Lessons.class);
                 intent.putExtra("L_name", "cpp");
-                intent.putExtra("Lesson_name", "1");
+                intent.putExtra("Lesson_name", "3");
                 startActivity(intent);
             }
         });
@@ -93,7 +93,7 @@ public class C_Plus_Plus extends AppCompatActivity {
 
                 Intent intent = new Intent(C_Plus_Plus.this, C_Plus_Plus_Lessons.class);
                 intent.putExtra("L_name", "cpp");
-                intent.putExtra("Lesson_name", "1");
+                intent.putExtra("Lesson_name", "5");
                 startActivity(intent);
             }
         });
@@ -105,7 +105,7 @@ public class C_Plus_Plus extends AppCompatActivity {
 
                 Intent intent = new Intent(C_Plus_Plus.this, C_Plus_Plus_Lessons.class);
                 intent.putExtra("L_name", "cpp");
-                intent.putExtra("Lesson_name", "1");
+                intent.putExtra("Lesson_name", "6");
                 startActivity(intent);
             }
         });

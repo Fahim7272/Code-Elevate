@@ -47,7 +47,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/loginn"
+        android:id="@+id/login_admin"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/pass"
