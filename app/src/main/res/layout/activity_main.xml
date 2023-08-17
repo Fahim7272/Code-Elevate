@@ -8,6 +8,8 @@
     tools:context=".MainActivity"
     android:background="#130139">
 
+
+
     <ImageView
         android:id="@+id/logoo"
         android:layout_width="120dp"
@@ -85,6 +87,9 @@
         android:background="@drawable/btn_orange"
         android:fontFamily="@font/poppins_bold"
         android:text="Signup" />
+
+
+
 
 
 

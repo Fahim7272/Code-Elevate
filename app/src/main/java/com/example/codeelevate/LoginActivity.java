@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText username,password;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://code-elevate-a1329-default-rtdb.firebaseio.com/");
-    Button login, b2, signInBtn;
+    Button login, b2, b3, signInBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +37,10 @@ public class LoginActivity extends AppCompatActivity {
                 String usernameTxt,passwordTxt;
                 usernameTxt=username.getText().toString();;
                 passwordTxt=password.getText().toString();
+                if(usernameTxt.isEmpty() && passwordTxt.isEmpty()){
+                    Toast.makeText(getApplicationContext(),"Please fill all filds!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
 
                 databaseReference.child("user").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -84,6 +88,16 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        b3=(Button)findViewById(R.id.admin_login_btn);
+        b3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent intent = new Intent(LoginActivity.this, Admin.class);
                 startActivity(intent);
             }
         });
