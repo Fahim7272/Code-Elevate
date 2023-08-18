@@ -17,8 +17,11 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Admin_Main_Page extends AppCompatActivity {
 
+
+
+
     Button insertInfos;
-    EditText language, lessonNo, lessonPara, quiz, lessonProblem;
+    EditText language, lessonNo, lessonPara, quiz, quiz_ans, lessonProblem;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://code-elevate-a1329-default-rtdb.firebaseio.com/");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,20 +33,23 @@ public class Admin_Main_Page extends AppCompatActivity {
         lessonNo=findViewById(R.id.lesson_no);
         lessonPara=findViewById(R.id.insert_para);
         quiz=findViewById(R.id.insert_quiz);
+        quiz_ans=findViewById(R.id.insert_quiz_ans);
         lessonProblem=findViewById(R.id.insert_problems);
 
         insertInfos=(Button)findViewById(R.id.insert_lesson_btn);
 
-
         insertInfos.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                String languageTxt,lessonNoTxt, lessonParaTxt,quizTxt, problemTxt;
+                String languageTxt,lessonNoTxt, lessonParaTxt, quizTxt, quizAnsTxt, problemTxt;
                 languageTxt=language.getText().toString();;
                 lessonNoTxt=lessonNo.getText().toString();
                 lessonParaTxt= lessonPara.getText().toString();
                 quizTxt=quiz.getText().toString();
+                quizAnsTxt=quiz_ans.getText().toString();
                 problemTxt=lessonProblem.getText().toString();
+
+
 
 
 
@@ -60,11 +66,16 @@ public class Admin_Main_Page extends AppCompatActivity {
 
                     });
 
-
-                    databaseReference.child(languageTxt).child(lessonNoTxt).child("LessonNo").setValue(lessonNoTxt);
-                    databaseReference.child(languageTxt).child(lessonNoTxt).child("para").setValue(lessonParaTxt);
-                    databaseReference.child(languageTxt).child(lessonNoTxt).child("quiz").setValue(quizTxt);
-                    databaseReference.child(languageTxt).child(lessonNoTxt).child("problems").setValue(problemTxt);
+                    if(!lessonNoTxt.isEmpty())
+                        databaseReference.child(languageTxt).child(lessonNoTxt).child("LessonNo").setValue(lessonNoTxt);
+                    if(!lessonParaTxt.isEmpty())
+                        databaseReference.child(languageTxt).child(lessonNoTxt).child("para").setValue(lessonParaTxt);
+                    if(!quizTxt.isEmpty())
+                        databaseReference.child(languageTxt).child(lessonNoTxt).child("quiz").child("q1").setValue(quizTxt);
+                    if(!quizAnsTxt.isEmpty())
+                        databaseReference.child(languageTxt).child(lessonNoTxt).child("quiz").child("ans").setValue(quizAnsTxt);
+                    if(!problemTxt.isEmpty())
+                        databaseReference.child(languageTxt).child(lessonNoTxt).child("problems").setValue(problemTxt);
 
                     Toast.makeText(getApplicationContext(),"Insertion Successfull", Toast.LENGTH_SHORT).show();
                     //Toast.makeText(getApplicationContext(),"Welcome"+usernameTxt+"!", Toast.LENGTH_SHORT).show();
