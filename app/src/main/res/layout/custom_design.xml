@@ -3,11 +3,11 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <androidx.appcompat.widget.AppCompatButton
+    <TextView
         android:id="@+id/lessson_button"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
         android:layout_margin="7dp"
         android:background="@drawable/light_color_btn"
         android:rotationX="0"

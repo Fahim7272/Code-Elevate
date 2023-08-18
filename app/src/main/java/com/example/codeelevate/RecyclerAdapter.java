@@ -1,10 +1,12 @@
 package com.example.codeelevate;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.view.menu.MenuView;
@@ -14,6 +16,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 {
     String data[];
     Context context;
+    View view;
 
     public RecyclerAdapter(Context context,String[] data) {
         this.data = data;
@@ -33,10 +36,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public void onBindViewHolder(RecyclerAdapter.ViewHolder holder, int position) {
 
         holder.button.setText(data[position]);
-        holder.button.setOnClickListener(new View.OnClickListener() {
+        String pos = Integer.toString(position+1);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(view.getContext(), C_Plus_Plus_Lessons.class);
+                intent.putExtra("L_name", "cpp");
+                intent.putExtra("Lesson_name", pos);
+                view.getContext().startActivity(intent);
             }
         });
     }
@@ -47,10 +54,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        Button button;
+        TextView button;
+
+
         public ViewHolder(View itemView) {
             super(itemView);
+
             button= itemView.findViewById(R.id.lessson_button);
+
+
         }
     }
 }
