@@ -21,7 +21,9 @@ public class Admin_Main_Page extends AppCompatActivity {
 
 
     Button insertInfos;
-    EditText language, lessonNo, lessonPara, quiz, quiz_ans, lessonProblem;
+    EditText language, lessonNo, lessonPara, quiz1,quiz2,quiz3,quiz4,quiz5,
+            quiz_ans1, quiz_ans2, quiz_ans3, quiz_ans4, quiz_ans5,
+            lessonProblem1, lessonProblem2, lessonProblem3 ,lessonProblem4 ,lessonProblem5;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://code-elevate-a1329-default-rtdb.firebaseio.com/");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +34,21 @@ public class Admin_Main_Page extends AppCompatActivity {
         language=findViewById(R.id.language);
         lessonNo=findViewById(R.id.lesson_no);
         lessonPara=findViewById(R.id.insert_para);
-        quiz=findViewById(R.id.insert_quiz);
-        quiz_ans=findViewById(R.id.insert_quiz_ans);
-        lessonProblem=findViewById(R.id.insert_problems);
+        quiz1=findViewById(R.id.insert_quiz1);
+        quiz2=findViewById(R.id.insert_quiz2);
+        quiz3=findViewById(R.id.insert_quiz3);
+        quiz4=findViewById(R.id.insert_quiz4);
+        quiz5=findViewById(R.id.insert_quiz5);
+        quiz_ans1=findViewById(R.id.insert_quiz_ans1);
+        quiz_ans2=findViewById(R.id.insert_quiz_ans2);
+        quiz_ans3=findViewById(R.id.insert_quiz_ans3);
+        quiz_ans4=findViewById(R.id.insert_quiz_ans4);
+        quiz_ans5=findViewById(R.id.insert_quiz_ans5);
+        lessonProblem1=findViewById(R.id.insert_problems1);
+        lessonProblem2=findViewById(R.id.insert_problems2);
+        lessonProblem3=findViewById(R.id.insert_problems3);
+        lessonProblem4=findViewById(R.id.insert_problems4);
+        lessonProblem5=findViewById(R.id.insert_problems5);
 
         insertInfos=(Button)findViewById(R.id.insert_lesson_btn);
 
@@ -45,9 +59,9 @@ public class Admin_Main_Page extends AppCompatActivity {
                 languageTxt=language.getText().toString();;
                 lessonNoTxt=lessonNo.getText().toString();
                 lessonParaTxt= lessonPara.getText().toString();
-                quizTxt=quiz.getText().toString();
-                quizAnsTxt=quiz_ans.getText().toString();
-                problemTxt=lessonProblem.getText().toString();
+                quizTxt=quiz1.getText().toString();
+                quizAnsTxt=quiz_ans1.getText().toString();
+                problemTxt=lessonProblem1.getText().toString();
 
 
 
@@ -66,15 +80,15 @@ public class Admin_Main_Page extends AppCompatActivity {
 
                     });
 
-                    if(!lessonNoTxt.isEmpty())
+                    if(lessonNoTxt.isEmpty() == false)
                         databaseReference.child(languageTxt).child(lessonNoTxt).child("LessonNo").setValue(lessonNoTxt);
-                    if(!lessonParaTxt.isEmpty())
+                    if(lessonParaTxt.isEmpty() == false)
                         databaseReference.child(languageTxt).child(lessonNoTxt).child("para").setValue(lessonParaTxt);
-                    if(!quizTxt.isEmpty())
+                    if(quizTxt.isEmpty() == false)
                         databaseReference.child(languageTxt).child(lessonNoTxt).child("quiz").child("q1").setValue(quizTxt);
-                    if(!quizAnsTxt.isEmpty())
+                    if(quizAnsTxt.isEmpty() == false)
                         databaseReference.child(languageTxt).child(lessonNoTxt).child("quiz").child("ans").setValue(quizAnsTxt);
-                    if(!problemTxt.isEmpty())
+                    if(problemTxt.isEmpty() == false)
                         databaseReference.child(languageTxt).child(lessonNoTxt).child("problems").setValue(problemTxt);
 
                     Toast.makeText(getApplicationContext(),"Insertion Successfull", Toast.LENGTH_SHORT).show();

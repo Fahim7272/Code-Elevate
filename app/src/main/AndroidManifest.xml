@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeElevate">
         <activity
+            android:name=".Quiz"
+            android:exported="false" />
+        <activity
             android:name=".Admin_Main_Page"
             android:exported="false" />
         <activity

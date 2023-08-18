@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Admin extends AppCompatActivity {
 
-    Button login;
+    Button login, user_login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,15 @@ public class Admin extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(Admin.this, Admin_Main_Page.class);
+                startActivity(intent);
+            }
+        });
+
+        user_login=(Button)findViewById(R.id.login_btn_for_user);
+        user_login.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Admin.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

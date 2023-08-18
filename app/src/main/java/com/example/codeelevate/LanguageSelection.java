@@ -74,7 +74,8 @@ public class LanguageSelection extends AppCompatActivity {
                         break;
 
                     case R.id.nav_account:
-                        Toast.makeText(LanguageSelection.this, "Facebook", Toast.LENGTH_SHORT).show();
+                        Intent intent2 = new Intent(LanguageSelection.this,AccountInfo.class);
+                        startActivity(intent2);
                         drawerLayout.closeDrawers();
                         break;
 
