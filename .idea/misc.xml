@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ekram/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/activity_account_info.xml" value="0.1" />
+        <entry key="..\:/Users/Ekram/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/activity_cplus_plus.xml" value="0.1" />
         <entry key="..\:/Users/Ekram/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/activity_cplus_plus_lessons.xml" value="0.10144927536231885" />
+        <entry key="..\:/Users/Ekram/AndroidStudioProjects/Code-Elevate/app/src/main/res/layout/custom_design.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.26205128205128203" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable/btn_orange.xml" value="0.2703125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CodeElevate/app/src/main/res/drawable/circle.xml" value="0.2703125" />

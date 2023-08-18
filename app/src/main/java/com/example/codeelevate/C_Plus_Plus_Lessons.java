@@ -17,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class C_Plus_Plus_Lessons extends AppCompatActivity {
 
-    TextView paragraph;
+    TextView paragraph,lesson_number;
     String Language, lessonNo;
     Button lesson_btn, quiz, problems;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://code-elevate-a1329-default-rtdb.firebaseio.com/");
@@ -50,8 +50,8 @@ public class C_Plus_Plus_Lessons extends AppCompatActivity {
             }
 
         });
-
-
+        lesson_number=findViewById(R.id.lesson_number);
+        lesson_number.setText("Lesson : 0"+lessonNo);
 
         lesson_btn=(Button)findViewById(R.id.lesson_btn);
 
@@ -79,26 +79,6 @@ public class C_Plus_Plus_Lessons extends AppCompatActivity {
 
         });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
 
 }
