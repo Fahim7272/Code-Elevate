@@ -31,7 +31,7 @@ public class C_Plus_Plus extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerAdapter adapter;
     String LessonName[]={"Lesson: 1","Lesson: 2","Lesson: 3","Lesson: 4","Lesson: 5",
-            "Lesson: 6","Lesson: 7","Lesson: 9","Lesson: 10","Lesson: 11","Lesson: 12",
+            "Lesson: 6","Lesson: 7","Lesson: 8", "Lesson: 9","Lesson: 10","Lesson: 11","Lesson: 12",
             "Lesson: 13","Lesson: 14","Lesson: 15","Lesson: 16"};
 
     @Override
@@ -71,7 +71,8 @@ public class C_Plus_Plus extends AppCompatActivity {
                         break;
 
                     case R.id.nav_account:
-                        Toast.makeText(C_Plus_Plus.this, "Facebook", Toast.LENGTH_SHORT).show();
+                        Intent intent2 = new Intent(C_Plus_Plus.this,AccountInfo.class);
+                        startActivity(intent2);
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.nav_leaderBoard:

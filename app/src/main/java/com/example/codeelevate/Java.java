@@ -157,7 +157,8 @@ public class Java extends AppCompatActivity {
                         break;
 
                     case R.id.nav_account:
-                        Toast.makeText(Java.this, "Facebook", Toast.LENGTH_SHORT).show();
+                        Intent intent2 = new Intent(Java.this,AccountInfo.class);
+                        startActivity(intent2);
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.nav_leaderBoard:

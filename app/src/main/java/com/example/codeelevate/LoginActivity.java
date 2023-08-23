@@ -18,6 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
 
+    public String usernameTxt,passwordTxt;
 
     EditText username,password;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://code-elevate-a1329-default-rtdb.firebaseio.com/");
@@ -34,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                String usernameTxt,passwordTxt;
+
                 usernameTxt=username.getText().toString();;
                 passwordTxt=password.getText().toString();
                 if(usernameTxt.isEmpty() && passwordTxt.isEmpty()){

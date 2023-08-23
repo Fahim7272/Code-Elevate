@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 public class SignupActivity extends AppCompatActivity {
 
 
-    Button signUpBtn;
+    Button signUpBtn, b2;
     EditText fullname,username, email,password;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://code-elevate-a1329-default-rtdb.firebaseio.com/");
     @Override
@@ -81,6 +81,15 @@ public class SignupActivity extends AppCompatActivity {
             }
 
 
+        });
+
+        b2=(Button)findViewById(R.id.signup_page_to_login);
+        b2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
         });
     }
 }
