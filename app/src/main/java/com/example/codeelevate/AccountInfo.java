@@ -17,7 +17,7 @@ import org.w3c.dom.Text;
 public class AccountInfo extends AppCompatActivity {
 
 
-    TextView name, user_name, email, stopstalk, progress;
+    TextView name, user_name_btn, email, stopstalk, progress;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://code-elevate-a1329-default-rtdb.firebaseio.com/");
 
     String _email, _stopstalk, getName;
@@ -27,7 +27,7 @@ public class AccountInfo extends AppCompatActivity {
         setContentView(R.layout.activity_account_info);
 
         name = findViewById(R.id.usernamee);
-        user_name = findViewById(R.id.usernamee);
+        user_name_btn = findViewById(R.id.usernamee);
         email = findViewById(R.id.nameee);
         stopstalk = findViewById(R.id.nameee);
 
