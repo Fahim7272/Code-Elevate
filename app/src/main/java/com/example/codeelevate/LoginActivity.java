@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -20,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public String usernameTxt,passwordTxt;
 
-    EditText username,password;
+    TextInputLayout password, username;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://code-elevate-a1329-default-rtdb.firebaseio.com/");
     Button login, b2, b3, signInBtn;
     @Override
@@ -36,8 +37,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                usernameTxt=username.getText().toString();;
-                passwordTxt=password.getText().toString();
+                usernameTxt=username.getEditText().getText().toString();
+                passwordTxt=password.getEditText().getText().toString();
                 if(usernameTxt.isEmpty() && passwordTxt.isEmpty()){
                     Toast.makeText(getApplicationContext(),"Please fill all filds!", Toast.LENGTH_SHORT).show();
                     return;
@@ -58,6 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(),"Welcome "+usernameTxt+"!", Toast.LENGTH_SHORT).show();
 
                                 Intent intent = new Intent(LoginActivity.this, LanguageSelection.class);
+                                intent.putExtra("user_name", usernameTxt);
                                 startActivity(intent);
                             }
                             else
@@ -89,6 +91,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+
+
                 startActivity(intent);
             }
         });

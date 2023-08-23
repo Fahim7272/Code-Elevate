@@ -40,29 +40,52 @@
         android:textColor="@color/white" />
 
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:id="@+id/username"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/tx"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/text_edit"
-        android:hint="  Username"
-        android:textSize="15sp" />
+        android:hint=" Username">
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_edit"
+        />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:id="@+id/pass"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/username"
         android:layout_centerInParent="true"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="35dp"
-        android:background="@drawable/text_edit"
-        android:hint="  Password"
-        android:textSize="15sp" />
+        android:hint=" Password"
+        app:passwordToggleEnabled="true"
+        android:background="@drawable/text_edit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_edit"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
 
 
     <androidx.appcompat.widget.AppCompatButton

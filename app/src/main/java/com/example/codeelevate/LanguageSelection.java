@@ -75,6 +75,9 @@ public class LanguageSelection extends AppCompatActivity {
 
                     case R.id.nav_account:
                         Intent intent2 = new Intent(LanguageSelection.this,AccountInfo.class);
+                        Intent intent = getIntent();
+                        String userName = intent.getStringExtra("user_name");
+                        intent.putExtra("user_name", userName);
                         startActivity(intent2);
                         drawerLayout.closeDrawers();
                         break;

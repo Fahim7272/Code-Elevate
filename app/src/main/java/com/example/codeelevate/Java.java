@@ -158,6 +158,9 @@ public class Java extends AppCompatActivity {
 
                     case R.id.nav_account:
                         Intent intent2 = new Intent(Java.this,AccountInfo.class);
+                        Intent intentt = getIntent();
+                        String userName = intentt.getStringExtra("user_name");
+                        intentt.putExtra("user_name", userName);
                         startActivity(intent2);
                         drawerLayout.closeDrawers();
                         break;
