@@ -36,7 +36,7 @@ public class AccountInfo extends AppCompatActivity {
 
 
 
-        databaseReference.child("user").addListenerForSingleValueEvent(new ValueEventListener() {
+        /*databaseReference.child("user").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 if(snapshot.hasChild(userName)){
@@ -54,7 +54,7 @@ public class AccountInfo extends AppCompatActivity {
         });
 
         name.setText(getName);
-        email.setText(_email);
+        email.setText(_email);*/
         //stopstalk.setText(_stopstalk);
 
 

@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,125 +23,28 @@ public class Java extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
-    Button button, lesson_1,lesson_2,lesson_3,lesson_8,lesson_4,lesson_5,lesson_6,lesson_7;
-
+    Button button;
     ImageView imageMenu;
+    RecyclerView recyclerView;
+    RecyclerAdapter adapter;
+    String LessonName[]={"Lesson: 1","Lesson: 2","Lesson: 3","Lesson: 4","Lesson: 5",
+            "Lesson: 6","Lesson: 7","Lesson: 8", "Lesson: 9","Lesson: 10","Lesson: 11","Lesson: 12",
+            "Lesson: 13","Lesson: 14","Lesson: 15","Lesson: 16"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_java);
-
-
-
-
-        lesson_1 = findViewById(R.id.lesson1);
-        lesson_2 = findViewById(R.id.lesson2);
-        lesson_3 = findViewById(R.id.lesson3);
-        lesson_4 = findViewById(R.id.lesson4);
-        lesson_5 = findViewById(R.id.lesson5);
-        lesson_6 = findViewById(R.id.lesson6);
-        lesson_7 = findViewById(R.id.lesson7);
-        lesson_8 = findViewById(R.id.lesson8);
-
-        lesson_1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Java.this, C_Plus_Plus_Lessons.class);
-                intent.putExtra("L_name", "java");
-                intent.putExtra("Lesson_name", "1");
-                startActivity(intent);
-            }
-        });
-
-        lesson_2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Java.this, C_Plus_Plus_Lessons.class);
-                intent.putExtra("L_name", "java");
-                intent.putExtra("Lesson_name", "1");
-                startActivity(intent);
-            }
-        });
-
-
-        lesson_3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Java.this, C_Plus_Plus_Lessons.class);
-                intent.putExtra("L_name", "java");
-                intent.putExtra("Lesson_name", "1");
-                startActivity(intent);
-            }
-        });
-
-
-        lesson_4.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Java.this, C_Plus_Plus_Lessons.class);
-                intent.putExtra("L_name", "java");
-                intent.putExtra("Lesson_name", "1");
-                startActivity(intent);
-            }
-        });
-
-
-
-        lesson_5.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Java.this, C_Plus_Plus_Lessons.class);
-                intent.putExtra("L_name", "java");
-                intent.putExtra("Lesson_name", "1");
-                startActivity(intent);
-            }
-        });
-
-
-
-        lesson_6.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Java.this, C_Plus_Plus_Lessons.class);
-                intent.putExtra("L_name", "java");
-                intent.putExtra("Lesson_name", "1");
-                startActivity(intent);
-            }
-        });
-
-
-
-        lesson_7.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Java.this, C_Plus_Plus_Lessons.class);
-                intent.putExtra("L_name", "java");
-                intent.putExtra("Lesson_name", "1");
-                startActivity(intent);
-            }
-        });
-
-        lesson_8.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Java.this, C_Plus_Plus_Lessons.class);
-                intent.putExtra("L_name", "java");
-                intent.putExtra("Lesson_name", "1");
-                startActivity(intent);
-            }
-        });
-
-
-
-
-
-
-
-
+        setContentView(R.layout.activity_cplus_plus);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_View);
         imageMenu = findViewById(R.id.imageMenu);
+        recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager( new LinearLayoutManager(this));
+        adapter = new RecyclerAdapter(this, LessonName, "java");
+        recyclerView.setAdapter(adapter);
+
+
 
         toggle = new ActionBarDrawerToggle(Java.this, drawerLayout, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(toggle);
@@ -147,7 +52,9 @@ public class Java extends AppCompatActivity {
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected( MenuItem item) {
+            public boolean onNavigationItemSelected(MenuItem item) {
+
+
 
                 switch (item.getItemId()) {
                     case R.id.nav_home:
@@ -158,9 +65,9 @@ public class Java extends AppCompatActivity {
 
                     case R.id.nav_account:
                         Intent intent2 = new Intent(Java.this,AccountInfo.class);
-                        Intent intentt = getIntent();
-                        String userName = intentt.getStringExtra("user_name");
-                        intentt.putExtra("user_name", userName);
+                        Intent intent = getIntent();
+                        String userName = intent.getStringExtra("user_name");
+                        intent.putExtra("user_name", userName);
                         startActivity(intent2);
                         drawerLayout.closeDrawers();
                         break;
@@ -181,6 +88,7 @@ public class Java extends AppCompatActivity {
             }
         });
 
+
         imageMenu = findViewById(R.id.imageMenu);
 
         imageMenu.setOnClickListener(new View.OnClickListener() {
@@ -190,5 +98,6 @@ public class Java extends AppCompatActivity {
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
+
     }
 }

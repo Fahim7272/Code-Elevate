@@ -17,10 +17,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     String data[];
     Context context;
     View view;
+    String language_name;
 
-    public RecyclerAdapter(Context context,String[] data) {
+    public RecyclerAdapter(Context context,String[] data, String language_name) {
         this.data = data;
         this.context = context;
+        this.language_name = language_name;
     }
 
     @Override
@@ -41,7 +43,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), C_Plus_Plus_Lessons.class);
-                intent.putExtra("L_name", "cpp");
+                intent.putExtra("L_name", language_name);
                 intent.putExtra("Lesson_name", pos);
                 view.getContext().startActivity(intent);
             }

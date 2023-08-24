@@ -19,10 +19,8 @@ public class C_Plus_Plus_Lessons extends AppCompatActivity {
 
     TextView paragraph,lesson_number;
     String Language, lessonNo;
-    String quiz_database1,quiz_database2,quiz_database3,quiz_database4,quiz_database5,
-            quiz_database_ans1,quiz_database_ans2,quiz_database_ans3,quiz_database_ans4,quiz_database_ans5,
-            problems_database1,problems_database2,problems_database3,problems_database4,problems_database5;
-    Button lesson_btn, quiz, problems;
+
+    Button quiz;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://code-elevate-a1329-default-rtdb.firebaseio.com/");
     String paragraph_from_database, quiz_database, problems_database;
 
@@ -42,22 +40,7 @@ public class C_Plus_Plus_Lessons extends AppCompatActivity {
             public void onDataChange(DataSnapshot snapshot) {
                 if(snapshot.hasChild(lessonNo)){
                     paragraph_from_database = snapshot.child(lessonNo).child("para").getValue(String.class);
-                    quiz_database1 = snapshot.child(lessonNo).child("quiz").child("q1").getValue(String.class);
-                    quiz_database2 = snapshot.child(lessonNo).child("quiz").child("q2").getValue(String.class);
-                    quiz_database3 = snapshot.child(lessonNo).child("quiz").child("q3").getValue(String.class);
-                    quiz_database4 = snapshot.child(lessonNo).child("quiz").child("q4").getValue(String.class);
-                    quiz_database5 = snapshot.child(lessonNo).child("quiz").child("q5").getValue(String.class);
-                    quiz_database_ans1 = snapshot.child(lessonNo).child("quiz").child("ans1").getValue(String.class);
-                    quiz_database_ans2 = snapshot.child(lessonNo).child("quiz").child("ans1").getValue(String.class);
-                    quiz_database_ans3 = snapshot.child(lessonNo).child("quiz").child("ans1").getValue(String.class);
-                    quiz_database_ans4 = snapshot.child(lessonNo).child("quiz").child("ans1").getValue(String.class);
-                    quiz_database_ans5 = snapshot.child(lessonNo).child("quiz").child("ans1").getValue(String.class);
-
-                    problems_database1 = snapshot.child(lessonNo).child("problems1").getValue(String.class);
-                    problems_database2 = snapshot.child(lessonNo).child("problems2").getValue(String.class);
-                    problems_database3 = snapshot.child(lessonNo).child("problems3").getValue(String.class);
-                    problems_database4 = snapshot.child(lessonNo).child("problems4").getValue(String.class);
-                    problems_database5 = snapshot.child(lessonNo).child("problems5").getValue(String.class);
+                    paragraph.setText(paragraph_from_database);
                 }
             }
 
@@ -70,25 +53,27 @@ public class C_Plus_Plus_Lessons extends AppCompatActivity {
         lesson_number=findViewById(R.id.lesson_number);
         lesson_number.setText("Lesson : 0"+lessonNo);
 
-        lesson_btn=(Button)findViewById(R.id.lesson_btn);
+       /* lesson_btn=(Button)findViewById(R.id.lesson_btn);
 
         lesson_btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 paragraph.setText(paragraph_from_database);
             }
 
-        });
+        });*/
         quiz=(Button)findViewById(R.id.quiz_btn);
 
         quiz.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                paragraph.setText(quiz_database1+"\n\n\n"+quiz_database2+"\n\n\n"+quiz_database3
-                        +"\n\n\n"+quiz_database4+"\n\n\n"+quiz_database5);
+                Intent intent = new Intent(C_Plus_Plus_Lessons.this, Quiz.class);
+                intent.putExtra("L_name_for_quiz", "cpp");
+                intent.putExtra("Lesson_name_for_quiz", lessonNo);
+                startActivity(intent);
             }
 
         });
 
-        problems=(Button)findViewById(R.id.problems_btn);
+        /*problems=(Button)findViewById(R.id.problems_btn);
 
         problems.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -97,9 +82,9 @@ public class C_Plus_Plus_Lessons extends AppCompatActivity {
                         "PROBLEM 3:\n" +problems_database3+"\n\n\n"+
                         "PROBLEM 4:\n"+ problems_database4+"\n\n\n"+
                         "PROBLEM 5:\n"+problems_database5);
-            }
+            }*//*
 
-        });
+        });*/
 
     }
 

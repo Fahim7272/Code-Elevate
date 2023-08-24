@@ -44,12 +44,8 @@ public class C_Plus_Plus extends AppCompatActivity {
         imageMenu = findViewById(R.id.imageMenu);
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager( new LinearLayoutManager(this));
-        adapter = new RecyclerAdapter(this, LessonName);
+        adapter = new RecyclerAdapter(this, LessonName, "cpp");
         recyclerView.setAdapter(adapter);
-
-
-
-
 
 
 
