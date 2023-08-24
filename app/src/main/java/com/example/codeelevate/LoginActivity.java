@@ -107,14 +107,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        Button lagbena = (Button) findViewById(R.id.invisible_btn);
+        /*Button lagbena = (Button) findViewById(R.id.invisible_btn);
         lagbena.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 Intent intent = new Intent(LoginActivity.this, LanguageSelection.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
 
 
